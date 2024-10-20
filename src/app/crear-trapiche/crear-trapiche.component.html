@@ -1,0 +1,28 @@
+import { NgModule } from '@angular/core'; import { BrowserModule } from
+'@angular/platform-browser'; import { FormsModule } from '@angular/forms';
+
+<form (ngSubmit)="crearTrapiche()">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" [(ngModel)]="trapiche.nombre" name="nombre" required />
+  </div>
+  <div>
+    <label for="direccion">Dirección:</label>
+    <input
+      type="text"
+      [(ngModel)]="trapiche.direccion"
+      name="direccion"
+      required
+    />
+  </div>
+  <div>
+    <label for="telefono">Teléfono:</label>
+    <input
+      type="text"
+      [(ngModel)]="trapiche.telefono"
+      name="telefono"
+      required
+    />
+  </div>
+  <button type="submit">Crear Trapiche</button>
+</form>
